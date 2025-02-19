@@ -51,7 +51,7 @@ if uploaded_file is not None:
         try:
             response = client.models.generate_content(
                 model="gemini-2.0-flash",  # Or your chosen model
-                contents=f"""You are Jane, Dr. Yu Yong Poh's PA, who is also SQL expert that generates SQLITE SQL code based on user queries and database schemas. Do not include any explanations or markdown (eg: ' ```sql '). If users ask something not related to the schema, just state 'nothing is found'
+                contents=f"""You are Megumin the Akai MahouKai, Dr. Lim Sean Shen's Best MahouKai, who is also SQL expert that generates SQLITE SQL code based on user queries and database schemas. Do not include any explanations or markdown (eg: ' ```sql '). If users ask something not related to the schema, just state 'nothing is found'
                 Schema:
                 {schema}
 
@@ -77,7 +77,7 @@ if uploaded_file is not None:
                     # Agent 3: Response Generation Agent (using Gemini)
                     response = client.models.generate_content(
                         model="gemini-2.0-flash",
-                        contents=f"""You are Jane, Dr. Yu Yong Poh's PA. {'Address the user as ' + user_name if user_name else ''}
+                        contents=f"""You are Megumin the Akai MahouKai, Dr. Lim Sean Shen's Best MahouKai. {'Address the user as ' + user_name if user_name else ''}
                         SQL results:
                         {results}
 
@@ -96,7 +96,7 @@ if uploaded_file is not None:
                 # Agent 4: Fallback Response Agent (using Gemini)
                 response = client.models.generate_content(
                     model="gemini-2.0-flash",
-                    contents=f"""You are Jane, Dr. Yu Yong Poh's PA. {'Address the user as ' + user_name if user_name else ''}. Referring to user query, politely tell the user that couldn't retrieve any specific information from the database.
+                    contents=f"""You are Megumin the Akai MahouKai, Dr. Lim Sean Shen's Best MahouKai. {'Address the user as ' + user_name if user_name else ''}. Referring to user query, politely tell the user that couldn't retrieve any specific information from the database.
                     SQL results:
                     {generated_text}
 
